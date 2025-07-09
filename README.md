@@ -2,6 +2,10 @@
 
 A Chrome extension that integrates with Gmail to provide AI-powered email assistance using local Llama 3 model via Ollama.
 
+
+<img width="1514" alt="image" src="https://github.com/user-attachments/assets/b76c6e32-9a1c-4322-a01a-a5e70abff1ae" />
+
+
 ## Features
 
 - **Enhance Emails**: Improve existing email drafts with better tone, clarity, and professionalism
