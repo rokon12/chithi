@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chithi Icon Generator</title>
+</head>
+<body>
+  <h1>Chithi Icon Generator</h1>
+  <p>Use this page to generate icons for your extension. Save each canvas as PNG with the appropriate size.</p>
+  
+  <div>
+    <h3>16x16</h3>
+    <canvas id="icon16" width="16" height="16"></canvas>
+  </div>
+  
+  <div>
+    <h3>48x48</h3>
+    <canvas id="icon48" width="48" height="48"></canvas>
+  </div>
+  
+  <div>
+    <h3>128x128</h3>
+    <canvas id="icon128" width="128" height="128"></canvas>
+  </div>
+  
+  <script>
+    function drawIcon(canvas, size) {
+      const ctx = canvas.getContext('2d');
+      const gradient = ctx.createLinearGradient(0, 0, size, size);
+      gradient.addColorStop(0, '#667eea');
+      gradient.addColorStop(1, '#764ba2');
+      
+      // Background
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, size, size);
+      
+      // Letter icon
+      ctx.strokeStyle = 'white';
+      ctx.lineWidth = size / 16;
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      
+      // Draw envelope
+      const padding = size * 0.2;
+      const left = padding;
+      const top = padding;
+      const right = size - padding;
+      const bottom = size - padding;
+      
+      ctx.beginPath();
+      // Envelope body
+      ctx.moveTo(left, top + (bottom - top) * 0.3);
+      ctx.lineTo(left, bottom);
+      ctx.lineTo(right, bottom);
+      ctx.lineTo(right, top + (bottom - top) * 0.3);
+      
+      // Envelope flap
+      ctx.moveTo(left, top + (bottom - top) * 0.3);
+      ctx.lineTo(size / 2, top + (bottom - top) * 0.6);
+      ctx.lineTo(right, top + (bottom - top) * 0.3);
+      
+      // Top line
+      ctx.moveTo(left, top + (bottom - top) * 0.3);
+      ctx.lineTo(size / 2, top);
+      ctx.lineTo(right, top + (bottom - top) * 0.3);
+      
+      ctx.stroke();
+    }
+    
+    drawIcon(document.getElementById('icon16'), 16);
+    drawIcon(document.getElementById('icon48'), 48);
+    drawIcon(document.getElementById('icon128'), 128);
+  </script>
+</body>
+</html>

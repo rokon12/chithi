@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chithi - Gmail AI Assistant</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+    
+    body {
+      margin: 0;
+      padding: 0;
+      width: 350px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f9fafb;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .header h1 {
+      margin: 0 0 8px 0;
+      font-size: 24px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .header p {
+      margin: 0;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+    
+    .content {
+      padding: 20px;
+    }
+    
+    .feature {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: all 0.2s ease;
+    }
+    
+    .feature:hover {
+      border-color: #667eea;
+      box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+    }
+    
+    .feature h3 {
+      margin: 0 0 6px 0;
+      font-size: 16px;
+      color: #1f2937;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .feature p {
+      margin: 0;
+      font-size: 13px;
+      color: #6b7280;
+      line-height: 1.5;
+    }
+    
+    .status {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      background: white;
+      border-top: 1px solid #e5e7eb;
+    }
+    
+    .status-indicator {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #6b7280;
+    }
+    
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ef4444;
+    }
+    
+    .status-dot.active {
+      background: #10b981;
+    }
+    
+    .bengali-text {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Chithi
+    </h1>
+    <p class="bengali-text">চিঠি</p>
+    <p>Your AI-powered Gmail Assistant</p>
+  </div>
+  
+  <div class="content">
+    <div class="feature">
+      <h3>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#667eea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Enhance Emails
+      </h3>
+      <p>Improve your existing email drafts with better tone, clarity, and professionalism</p>
+    </div>
+    
+    <div class="feature">
+      <h3>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 2L14 6C14 6.53043 14.2107 7.03914 14.5858 7.41421C14.9609 7.78929 15.4696 8 16 8L20 8M14 2L9 2C7.89543 2 7 2.89543 7 4L7 20C7 21.1046 7.89543 22 9 22L18 22C19.1046 22 20 21.1046 20 20L20 8M14 2L20 8M10 9L10 9.01M10 13L10 13.01M10 17L10 17.01" stroke="#667eea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Generate Emails
+      </h3>
+      <p>Create complete emails from your ideas with customizable tone and purpose</p>
+    </div>
+    
+    <div class="feature">
+      <h3>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 11L12 14L22 4M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16" stroke="#667eea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Analyze Writing
+      </h3>
+      <p>Get instant feedback and suggestions to improve your email communication</p>
+    </div>
+  </div>
+  
+  <div class="status">
+    <div class="status-indicator">
+      <span class="status-dot" id="status-dot"></span>
+      <span id="status-text">Backend disconnected</span>
+    </div>
+    <span style="font-size: 12px; color: #9ca3af;">v1.0.0</span>
+  </div>
+  
+  <script src="scripts/popup.js"></script>
+</body>
+</html>

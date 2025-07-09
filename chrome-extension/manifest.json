@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Chithi (চিঠি) - Gmail AI Assistant",
+  "version": "1.0.0",
+  "description": "AI-powered Gmail assistant using local Llama 3 for email enhancement, generation, and analysis",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://mail.google.com/*",
+    "http://localhost:8080/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["scripts/gmail-integration.js"],
+      "css": ["styles/chithi.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["styles/chithi.css", "icons/*"],
+      "matches": ["https://mail.google.com/*"]
+    }
+  ]
+}
