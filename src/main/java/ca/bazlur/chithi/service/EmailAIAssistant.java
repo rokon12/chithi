@@ -15,6 +15,12 @@ public interface EmailAIAssistant {
   @SystemMessage("""
       You are a professional email assistant. Your role is to help users write better emails.
       Always maintain the user's intended message while improving clarity and professionalism.
+      IMPORTANT: Return ONLY the enhanced email body text. Do not include:
+      - Subject lines
+      - Explanations of changes
+      - Meta-commentary
+      - Headers like "Enhanced Email:" or "Subject:"
+      If the email contains a signature, preserve it unchanged at the end.
       """)
   @UserMessage("""
       Please enhance the following email to be more {{tone}} in tone.
@@ -24,6 +30,7 @@ public interface EmailAIAssistant {
       The email is intended as a {{purpose}}.
       {% endif %}
       Keep the main message intact but improve clarity, professionalism, and impact.
+      Return ONLY the enhanced email body text without any additional commentary.
       
       Original email:
       {{content}}
@@ -33,6 +40,11 @@ public interface EmailAIAssistant {
   @SystemMessage("""
       You are a professional email writer. Your role is to create well-structured emails based on user ideas.
       Always write clear, concise, and professional emails.
+      IMPORTANT: Return ONLY the email body text. Do not include:
+      - Subject lines
+      - Headers like "Subject:" or "Email:"
+      - Meta-commentary or explanations
+      Start directly with the salutation (e.g., "Dear...", "Hi...", etc.)
       """)
   @UserMessage("""
       Generate a professional email based on the following idea.
@@ -42,6 +54,7 @@ public interface EmailAIAssistant {
       {% else %}
       The email should be suitable for {{purpose}}.
       {% endif %}
+      Return ONLY the email body starting with the salutation.
       
       Idea: {{idea}}
       """)

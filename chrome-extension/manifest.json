@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Chithi (চিঠি) - Gmail AI Assistant",
-  "version": "1.0.0",
-  "description": "AI-powered Gmail assistant using local Llama 3 for email enhancement, generation, and analysis",
+  "version": "1.1.0",
+  "description": "AI-powered Gmail assistant for email enhancement, generation, and analysis",
   "permissions": [
     "activeTab",
     "storage"
