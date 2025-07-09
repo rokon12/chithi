@@ -61,14 +61,6 @@ The backend will start on `http://localhost:8080`
 4. Select the `chrome-extension` folder from this project
 5. The Chithi extension icon should appear in your toolbar
 
-### 4. Generate Extension Icons
-
-1. Open `chrome-extension/icons/icon-generator.html` in your browser
-2. Right-click each canvas and save as PNG with the appropriate filename:
-   - Save 16x16 canvas as `icon16.png`
-   - Save 48x48 canvas as `icon48.png`
-   - Save 128x128 canvas as `icon128.png`
-
 ## Usage
 
 1. Open Gmail in Chrome
